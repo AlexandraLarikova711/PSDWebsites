@@ -1,0 +1,230 @@
+body {
+	margin: 0;
+	color:#000;
+	font:12px Montserrat, Helvetica, sans-serif;
+	background:#fff;
+	min-width: 320px;
+}
+* {
+	-webit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+			box-sizing: border-box;
+}
+.wrapper {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.header {
+	position: relative;
+	padding: 45px 50px 40px;
+	background-color: #373c3f;
+}
+.header:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+}
+.header .logo {
+	float: left;
+}
+.header .logo a {
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 600;
+	color: #fff;
+	padding-right: 15px;
+	margin: 0;
+}
+.header .navigation ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.header .navigation ul li {
+	display: inline-block;
+	list-style: none;
+	padding: 0 15px;
+}
+.header .navigation a {
+	text-decoration: none;
+	font-size: 13px;
+	font-weight: 600;
+	color: #fff;
+}
+.navigation+.dropdown {
+	display: none;
+}
+.header .navigation a:hover {
+	text-decoration: underline;
+}
+.promo {
+	background-image: linear-gradient(125deg, #17b3c5, #0890a8);
+	padding: 100px 80px;
+}
+.promo span {
+	display: block;
+	color: #fff;
+	font-size: 60px;
+	font-weight: 500;
+	padding: 90px 0 30px;
+}
+.promo a {
+	display: block;
+	position: relative;
+	padding: 0 0 60px;
+	color: #a6d6df;
+	font-size: 34px;
+	text-decoration: none;
+}
+.promo a:hover {
+	color: #fff;
+}
+.promo a:after {
+	content: "";
+	position: absolute;
+	background: url(../img/ico-next.png) no-repeat;
+	width: 15px;
+	height: 25px;
+	top: 8px;
+	right: 30%;
+}
+.images {
+	line-height: 0;
+}
+.images .photo-top {
+	overflow: hidden;
+	position: relative;
+	background-color: #bc3184;
+}
+.photo-top img {
+	display: block;
+	width: 77.74%;
+	height: auto;
+}
+.photo-top a {
+	content: "";
+	position: absolute;
+	background: url(../img/ico-arrow.jpg) no-repeat;
+	width: 26px;
+	height: 42px;
+	top: 50%;
+	margin-top: -15px;
+	right: 9%;
+	text-indent: -9999px;
+}
+.photo-block {
+	margin-top: -1px;
+	overflow: hidden;
+}
+.photo-block img {
+	width: 33.33%;
+	height: auto;
+	float: left;
+}
+.articles {
+	padding: 60px 20px 130px 80px;
+	background-color: #ebebeb;
+	margin-top: -2px;
+}
+.articles a {
+	margin: 0;
+	color: #088ca5;
+	font-size: 34px;
+	font-weight: 400;
+	padding-bottom: 30px;
+	text-decoration: none;
+}
+.text {
+	display: table;
+}
+.text .p {
+	display: table-cell;
+	color: #515151;
+	font: 14px/26px Montserrat, Helvetica, sans-serif;;
+}
+.text .p {
+	margin: 0;
+	padding: 0 60px 45px 0;
+}/*
+@media screen and (max-width: 640px) {
+	.images .photo-block img {width: 33.33%;display:block;height: auto;}
+}*/
+@media screen and (max-width: 780px) {
+	.promo span {font-size: 37px;}
+	.promo a {font-size: 22px;}
+	.promo a:after {background-size: cover;width:12px;height:20px;right: 30%;}
+	.images .photo-block img {width: 100%;display: block;height: auto;}
+	.articles {padding: 70px;}
+	.text {display: block;}
+	.text .p {display: block;font-size: 22px; line-height: 44px;}
+	.text .p {padding: 5px;}
+	.header {position: relative;}
+	.navigation ul {display: none;}
+	.dropdown {
+		padding: 0 30px;
+		right: 0;
+		margin-top: -35px;
+		height: 100%;
+		background-color: #202529;
+		cursor: pointer;
+	}
+	.dropdown:before {
+		content: "";
+		width: 31px;
+		height: 4px;
+		background-color: #fff;
+		box-shadow: 0 -8px 0 0 #fff,
+		0 8px 0 0 #fff;
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		margin-top: -2px;
+	}
+	.dropdown:hover>ul {
+		display: block;
+		position: absolute;
+		font-style: normal;
+		line-height: 2;
+		top: 30px;
+		right: 0;
+		left: 0;
+		background-color: #40585d;
+		border-radius: 3px;
+		width: 100%;
+	}
+	.navigation li {
+		display: block;
+		margin-left: 0;
+	}
+	.navigation li a {
+		padding: 25px;
+		font-size: 14px;
+		display: block;
+		color: #96aebc;
+	}
+	.navigation li:hover a {
+		color: #fff;
+		background-color: #373c3f;
+		text-decoration: none;
+	}
+}
+@media screen and (max-width: 320px) {
+	.header {padding: 15px;}
+	.dropdown {
+		padding: 0 3px;
+		margin-top: -10px;
+	}
+	.dropdown:hover>ul {top: 35px;}
+	.navigation li a {padding: 5px;}
+	.promo {padding: 60px 25px 50px;}
+	.promo span {font-size: 20px;padding: 0 0 20px 0;}
+	.promo a {font-size: 15px;padding: 0;}
+	.promo a:after {background-size: cover;top: 2px;right: 17%;}
+	.images .photo-block img {width: 100%;display: block;height: auto;}
+	.photo-top a {background-size: cover;width: 10px;height: 14px;}
+	.articles {padding: 20px;}
+	.text {display: block;width: 100%; }
+	.text .p {display: block;font-size: 14px;line-height: 22px;}
+	.text .p {padding: 5px;}
+}
